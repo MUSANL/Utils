@@ -1,6 +1,10 @@
 import com.alibaba.fastjson.JSON;
+
 import java.lang.reflect.Field;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class data {
     public static void main(String[] args)
@@ -45,7 +49,7 @@ public class data {
         String sheetName = "控件模拟数据";
         System.out.println("start导出");
         long start = System.currentTimeMillis();
-        ExportExcel.excelExport(infos, titleMap, sheetName);
+        ExcelUtils.excelExport(infos, titleMap, sheetName);
         long end = System.currentTimeMillis();
         System.out.println("end导出");
         System.out.println("耗时："+(end-start)+"ms");
